@@ -81,8 +81,8 @@ Exception-håndtering bruges til at undgå "fejl", der forstyrrer den normale pr
 
 **Hvad er forskellen på checked og unchecked exceptions?**
 
-* Unchecked exceptions: Repræsenterer fejl (bugs) i selve programkoden (RunTimeException)
-* Checked exceptions: Repræsenterer fejl i de betingelser, programmet kræver. Det kan fx være ugyldig brugerindtastning, databaseproblemer, filer der ikke kan findes mv.
+* Checked exceptions: Denne form for exceptions er checked ved _"compile time"._ Det vil sige, at disse exceptions _SKAL_ håndteres enten ved _"try-and-catch-blocks"_ eller med keywordet _"throws"_. Hvis dette ikke gøres, så vil programmet slet ikke kunne kompileres.
+* Unchecked exceptions: Disse exceptions er _IKKE_ checked ved _"compile time"._ Det betyder, at programmet vil _"throwe"_ en unchecked exception, og selvom du ikke håndterer denne exception, så vil programme compile alligevel, selvom det på sigt ikke vil være hensigtsmæssigt. Det er derfor udviklerens opgave at tænke fremad for at undgå, at disse unchecked exceptions kan få programmet til at crashe ved uhensigtsmæssig brug. Ofte handler unchecked exceptions om ugyldig brugerindtastning, filer der ikke kan findes mv.
 
 **Vis et eksempel på en try-catch.**
 
