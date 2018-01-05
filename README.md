@@ -54,7 +54,7 @@ Eksempel på if/else og diverse løkker kan findes i klassen _"KontrolstrukturOg
 **Forklar hvad arrays er, og hvordan de kan anvendes i et javaprogram.**
 
 Et array er en beholder for data. Man kan sammenligne et array med en kommode med et antal skuffer - hver skuffe kan indeholde en værdi, som man kan tage frem og anvende.
-Arrayets størrelse af "fixed" - når antallet af skuffer (eller indexes som det hedder) er bestemt, så kan dette ikke ændres. Datatypen i et array skal desuden være den samme for alle elementer.
+Arrayets størrelse er "fixed" - når antallet af skuffer (eller indexes som det hedder) er bestemt, så kan dette ikke ændres. Datatypen i et array skal desuden være den samme for alle elementer.
 Har man et antal af elementer i et Javaprogram, som alle kan defineres inde for den samme datatype, vil det derfor være hensigtsmæssig at initialisere dem til et array for bedre at kunne håndtere dem og holde styr på dem.
 
 **Vis et eksempel på oprettelse af et array, og efterfølgende gennemløb af arrayet.**
@@ -75,9 +75,9 @@ Eksempel på oprettelse og gennemløb af ArrayList kan ses i _"Kontrolstrukturer
 Arrays er "fixed size" og ArrayList er dynamisk - den kan hele tiden udvides efter behov. Derfor anvendes et almindeligt array, hvis man på forhånd kender til antallet af elementer, der skal håndteres.
 
 ### 7. Exceptions
-**Forklar hvad exceptions er og, hvordan man benytter dem i et javaprogram.**
+**Forklar hvad exceptions er, og hvordan man benytter dem i et javaprogram.**
 
-Exception-håndtering bruges til at undgå "fejl", der forstyrrer den normale programeksekvering. Tillader man eksempelvis brugeren at indtaste data af typen integer vha. Scanner-klassen, og brugeren fejlagtigt indtaster bogstaver, så kan man håndtere problemet med exceptions - hvis man ikke gør det, kan man risikere programmet crasher. Man strukturerer typisk sin kode således, at man vha. _"try-and-catch-blocks"_ fortæller compileren, hvad man ønsker at udføre (try-block) og hvis der opstår problemer i denne eksekvering, så skal det opfanges af en exception (catch-block). Man kan håndtere exceptions i den klasse/metode, hvori de opstår, eller man kan sende dem tilbage i hierarkiet (tilbage i stack'en). Dette kaldes _"throws"._
+Exception-håndtering bruges til at undgå "fejl", der forstyrrer den normale programeksekvering. Tillader man eksempelvis brugeren at indtaste data af typen _integer_ (heltal) vha. Scanner-klassen, og brugeren fejlagtigt indtaster bogstaver, så kan man håndtere problemet med exceptions - hvis man ikke gør det, kan man risikere at programmet crasher. En korrekt kode konstrueres således sådan, at man vha. _"try-and-catch-blocks"_ fortæller compileren, hvad man ønsker at udføre (try-block) og hvis der opstår problemer i denne eksekvering, så skal det opfanges af en exception (catch-block). Man kan håndtere exceptions i den klasse/metode, hvori de opstår, eller man kan sende dem tilbage i hierarkiet (tilbage i stack'en). Dette kaldes _"throws"._
 
 **Hvad er forskellen på checked og unchecked exceptions?**
 
@@ -95,11 +95,9 @@ Eksempel på throws kan findes i klassen _"ThrowException"._
 ### 8. Nedarvning
 **Forklar nedarvning og fordelene ved det.**
 
-I Java nedarves en klasse - og dermed dens egenskaber og metoder - altid fra en anden klasse. Som udgangspunkt stammer alle klasser fra den overordnede klasse
-"Object". Når en klasse nedarves, får den nye klasse som sagt automatisk de egenskaber/metoder, som den klasse, den stammer fra.
+I Java nedarves en klasse - og dermed dens egenskaber og metoder - altid fra en anden klasse. Som udgangspunkt stammer alle klasser fra den overordnede klasse _"Object"._ Når en klasse nedarves, får den nye klasse som sagt automatisk de egenskaber/metoder, som den klasse, den stammer fra.
 Man kan snakke om et parent-child forhold eller et superclass-subclass forhold. Den klasse, der nedarves fra, kalder man
-for parent eller superclass til den klasse, der modtager dens egenskaber. Den klasse, der modtager egenskaber fra
-superclass'en kalder man så for subclass eller child.
+for parent eller superclass til den klasse, der modtager dens egenskaber. Den klasse, der modtager egenskaber fra superclass'en kalder man så for subclass eller child.
 Fordelene ved nedarvning er, at man ikke behøver angive klassevariabler og metoder flere steder. Det letter for det første udviklerens arbejde, men giver også bedre overblik over koden og bruger mindre plads i hukommelsen.
 
 **Forklar overriding af metoder.**
@@ -116,13 +114,12 @@ Se eksempel på nedarvning i klasserne _"Frugt"_ og _"Banan"._
 
 **Vis hvordan man kalder superklassens constructor.**
 
-En constructor er IKKE direkte nedarvet til subklassen (lige som instansvariabler og metoder er det). Hvis vi skal kalde en superklasses constructor i subklassen,
-skal vi bruge keywordet _"super"._ Se eksempel på dette i klassen _"Banan"._
+En constructor er _IKKE_ direkte nedarvet til subklassen (lige som instansvariabler og metoder er det). Hvis vi skal kalde en superklasses constructor i subklassen, skal vi bruge keywordet _"super"._ Se eksempel på dette i klassen _"Banan"._
 
 ### 9. Polymorfi
 **Forklar hvad polymorfi er, og hvordan man kan anvende det i et javaprogram.**
 
-Java er et objektorienteret programmeringssprog, og polymorfi er en meget central del dette. Polymorfi vil sige, at et objekt kan tage flere former. En banan er en banan, men en banan er også en frugt - det vi kalder et "is-a-relationship". Omvendt er en frugt ikke nødvendigvis en banan. Når man opbygger sit program på denne måde, gør man det meget fleksibelt og dynamisk, og det kan senere let udvides, uden man skal omskrive koden. Det kan være lidt svært at forklare polymorfi uden et eksempel, se derfor klassen _"Polymorfi"._
+Java er et objektorienteret programmeringssprog, og polymorfi er en meget central del af dette. Polymorfi vil sige, at et objekt kan tage flere former. En banan er en banan, men en banan er også en frugt - det vi kalder et "is-a-relationship". Omvendt er en frugt ikke nødvendigvis en banan. Nedarvning muliggør polymorfi, og når man opbygger sit program på denne måde, gør man det meget fleksibelt og dynamisk, og det kan senere let udvides, uden man skal omskrive hele koden. Det kan være lidt svært at forklare polymorfi uden et eksempel, se derfor klassen _"Polymorfi"._
 
 **Vis hvordan man skriver et interface.**
 
@@ -140,10 +137,10 @@ Det er en universiel løsning til at håndtere et problem, uanset hvad de konkre
 
 **Skriv pseudokode til en algoritme, der sorterer et array.**
 
-* Deklarer og initialiser _"mitArray",_
-* Laver for-loop der initialiserer mitArray[i] så længe i < mitArray.length,
-* Anvender metoden sort() fra klassen Arrays til at sortere elementerne,
-* Kører endnu et for-loop for at vise de sorterede værdier.
+* Deklarér og initialisér _"mitArray",_
+* Lav for-loop der initialiserer mitArray[i] så længe i < mitArray.length,
+* Anvend metoden sort() fra klassen Arrays til at sortere elementerne,
+* Kør endnu et for-loop for at vise de sorterede værdier. Sout til konsol.
 
 Se et eksempel på, hvordan man reelt sorterer et array med metoden _"sort()"_ i klassen _"SortingArrayWithMethod"._
 
